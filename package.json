@@ -1,0 +1,18 @@
+{
+  "name": "cerner-rpa",
+  "version": "1.0.0",
+  "description": "Login and add an invoice",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Laurent Demouge",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "install": "^0.13.0",
+    "npm": "^7.14.0",
+    "selenium-webdriver": "^4.0.0-beta.3"
+  }
+}
