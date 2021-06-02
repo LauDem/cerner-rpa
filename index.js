@@ -4,7 +4,7 @@ const {Builder} = require('selenium-webdriver');
 require('dotenv').config()
 
 var args = process.argv.slice(2);
-if (args.length < 6 || args.length > 7) throw new Error('6 parameters requested, '+args.length+' given');
+if (args.length < 6 || args.length > 7) throw new Error('6 or 7 parameters requested, '+args.length+' given');
 if (args.length == 7 && args[6] != 0) throw new Error('we simulate an error here!');
 console.log(args);
 
@@ -39,7 +39,8 @@ let invoice = {
     await driver.findElement(By.id("mat-input-6")).click()
     await driver.findElement(By.id("mat-input-6")).sendKeys(invoice.currency)
     await driver.findElement(By.css(".mat-button-wrapper")).click()
-        //await driver.eval(commands[i].command(commands[i].target))
+
+    await driver.quit();
     
 
 })();
